@@ -1,17 +1,18 @@
 from collections import deque
 
+
 def solve(maze):
 
     path = deque([maze.start])
 
     current = maze.start.Neighbours[2]
 
-    if current == None:
+    if current is None:
         return path
 
-    heading = 2 # South
+    heading = 2  # South
 
-    turn = 1 # Turning left, -1 for right
+    turn = 1  # Turning left, -1 for right
 
     startpos = maze.start.Position
     endpos = maze.end.Position
@@ -22,7 +23,6 @@ def solve(maze):
     count = 1
 
     completed = False
-
 
     while True:
         path.append(current)
@@ -35,21 +35,21 @@ def solve(maze):
 
         n = current.Neighbours
 
-        if n[(heading - turn) % 4] != None:
+        if n[(heading - turn) % 4] is not None:
             heading = (heading - turn) % 4
             current = n[heading]
             continue
 
-        if n[heading] != None:
+        if n[heading] is not None:
             current = n[heading]
             continue
 
-        if n[(heading + turn) % 4] != None:
+        if n[(heading + turn) % 4] is not None:
             heading = (heading + turn) % 4
             current = n[heading]
             continue
 
-        if n[(heading + 2) % 4] != None:
+        if n[(heading + 2) % 4] is not None:
             heading = (heading + 2) % 4
             current = n[heading]
             continue

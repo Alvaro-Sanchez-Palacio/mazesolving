@@ -25,3 +25,5 @@ This was just a side project I did for fun over a couple of evenings, I'm sure t
 - Mazes don't need to be square - as long as they are surrounded by black walls. The input image will obviously be square.
 - Large areas of white, using my algorithm, will essentially degenerate into an inefficient flood fill - avoid!
 
+### Change log
+- PEP8 : Added PEP8 formatting rules (modify lines length, declarations distributions, spaces between '#' and comments, etc.).
